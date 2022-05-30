@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Metrics</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+        <!-- Custom styles for this template -->
+        <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        {% block css %}{% endblock %}
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            {% block sidebar %}
+              {% include  '_items/sidebar.html' %}
+            {% endblock %}
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                {% block navbar %}
+                  {% include  '_items/navbar.html' %}
+                {% endblock %}
+                <!-- Page content-->
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/script.js' %}"></script>
+        {% block js %}{% endblock %}
+    </body>
+</html>

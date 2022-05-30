@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="row mx-2 my-4">
+    <div class="col-lg-12">
+      <div class="card p-2">
+        <div class="card-body">
+          <h5 class="card-title">Application</h5>
+          <table id="app" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th># of Applications</th>
+                <th>Application Method</th>
+                <th>Application Timing</th>
+                <th>Application Placement</th>
+                <th>Crop Group</th>
+                <th>Time / plot (hr)</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 mt-4">
+      <div class="card p-2">
+        <div class="card-body">
+          <h5 class="card-title">Result</h5>
+          <table id="result" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Indication</th>
+                <th>Country</th>
+                <th># of Applications</th>
+                <th>Application Method</th>
+                <th>Application Placement</th>
+                <th>Crop Group</th>
+                <th>Time / plot (hr)</th>
+                <th># number of plots</th>
+                <th>Total hrs. / trial</th>
+                <th>Total Trials Requested</th>
+                <th>Total hrs / TD</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script src="{% static 'js/data.js' %}"></script>
+  <script>
+    jQuery(document).ready(function () {
+      Home.init();
+    });
+  </script>
+{% endblock %}
