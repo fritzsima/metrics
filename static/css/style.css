@@ -316,6 +316,7 @@ caption {
 th {
   text-align: inherit;
   text-align: -webkit-match-parent;
+  min-width: 120px;
 }
 
 thead,

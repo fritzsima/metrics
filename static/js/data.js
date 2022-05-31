@@ -14,7 +14,7 @@ let app = [
         "appMethod": "Spray",
         "appTiming": "ACCRST, RECOMM, PREHAR, ATAPSY",
         "appPlace": "Foliar",
-        "cropCroup": "P",
+        "cropCroup": "F",
         "timePlot": "0.0125"
     },
     {
