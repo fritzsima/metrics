@@ -157,12 +157,19 @@ const Home = function () {
         });
     }
 
+    const handleCalculateClick = () => {
+        $('#calculate').on('click', function (e) {
+            $('#result_wrapper').css('display', 'block')
+        })
+    }
+
     return {
         init: function () {
             initializeSelect2Adapter();
             initializeAppDatatable();
             displayDataAppDatatable();
             initializeResultDatatable();
+            handleCalculateClick();
         }
     }
 }();
